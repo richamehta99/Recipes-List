@@ -9,5 +9,5 @@ RUN npm run build
 
 ### STAGE 2: Run ###
 FROM nginx:latest
-COPY --from=build /app/dist/Recipes-List/ /usr/share/nginx/html
+COPY --from=build /app/dist/ionic-angular-course/ /usr/share/nginx/html
 COPY ./nginx-custom.conf /etc/nginx/conf.d/default.conf
