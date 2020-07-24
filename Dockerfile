@@ -5,7 +5,7 @@ WORKDIR /app
 COPY package.json ./
 RUN npm install -g ionic
 COPY ./ /app/
-RUN npm run-script build:prod
+RUN npm run build --prod
 
 ### STAGE 2: Run ###
 FROM nginx:latest
