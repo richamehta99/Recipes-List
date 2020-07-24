@@ -1,11 +1,11 @@
 
 ### STAGE 1: Build ###
 FROM node:latest AS build
-WORKDIR /app
+WORKDIR www/app
 COPY package.json ./
 RUN npm install -g ionic
-COPY ./ /app/
-RUN npm run build --prod
+COPY ./ www/app/
+RUN npm run build 
 
 ### STAGE 2: Run ###
 FROM nginx:latest
